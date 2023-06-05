@@ -1,3 +1,6 @@
+-- CreateEnum
+CREATE TYPE "TASK_STATUS" AS ENUM ('NOT_STARTED', 'STARTED', 'COMPLETED');
+
 -- CreateTable
 CREATE TABLE "User" (
     "id" TEXT NOT NULL,
@@ -32,6 +35,7 @@ CREATE TABLE "Task" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
     "ownerId" TEXT NOT NULL,
     "projectId" TEXT NOT NULL,
+    "status" "TASK_STATUS" NOT NULL DEFAULT 'NOT_STARTED',
     "name" TEXT NOT NULL,
     "description" TEXT NOT NULL,
     "due" TIMESTAMP(3),
