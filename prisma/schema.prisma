@@ -18,8 +18,8 @@ model User {
   password  String
   firstName String?
   lastName  String?
-  Project   Project[]
-  Task      Task[]
+  projects  Project[]
+  tasks     Task[]
 }
 
 model Project {
@@ -33,12 +33,17 @@ model Project {
   name        String
   description String?
   due         DateTime?
-
-  deleted Boolean @default(false)
-  Task    Task[]
+  tasks       Task[]
+  deleted     Boolean   @default(false)
 
   @@unique([ownerId, name])
   @@index([ownerId, id])
+}
+
+enum TASK_STATUS {
+  NOT_STARTED
+  STARTED
+  COMPLETED
 }
 
 model Task {
@@ -52,6 +57,7 @@ model Task {
   projectId String
   project   Project @relation(fields: [projectId], references: [id])
 
+  status      TASK_STATUS @default(NOT_STARTED)
   name        String
   description String
 
