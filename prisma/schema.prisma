@@ -19,6 +19,7 @@ model User {
   firstName String?
   lastName  String?
   Project   Project[]
+  Task      Task[]
 }
 
 model Project {
@@ -34,7 +35,28 @@ model Project {
   due         DateTime?
 
   deleted Boolean @default(false)
+  Task    Task[]
 
   @@unique([ownerId, name])
   @@index([ownerId, id])
+}
+
+model Task {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  ownerId String
+  owner   User   @relation(fields: [ownerId], references: [id])
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id])
+
+  name        String
+  description String
+
+  due     DateTime?
+  deleted Boolean   @default(false)
+
+  @@index([ownerId])
 }
