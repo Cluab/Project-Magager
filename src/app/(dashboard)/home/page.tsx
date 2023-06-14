@@ -1,4 +1,4 @@
-import GreetingsSkeleton from "@/components/GreatingSkeleton";
+import GreetingsSkeleton from "@/components/GreetingSkeleton";
 import Greeting from "@/components/Greeting";
 import { delay } from "@/lib/async";
 import { getUserFromCookie } from "@/lib/auth";
