@@ -1,34 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Project Management App
+
+This is a small-scale Project Management app that allows you to track your projects and keep track of completed tasks.
+
+## Features
+
+- Login page: Users must sign up for a new account to keep track of their unique progress. The authentication system is built with JWT Tokens and stored in a cookie.
+
+- Dashboard: You can view all of your projects with the percentage of completed tasks displayed below each project. Your recent tasks are presented at the bottom.
+
+- Project page: By clicking on a specific project, you will be directed to a dynamic page that shows all the tasks for that particular project.
+
+## Technologies Used
+
+- Next.js
+- React.js
+- Prisma
+- PostgreSQL
+- Tailwind
+
+## Live Demo
+
+- [Demo Link](https://project-manager-mezn.vercel.app/home)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Node.js
+- npm
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/Cluab/Project-Manager.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   cd Project-Manager
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install the dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+### Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Start the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  ```bash
+  npm run dev
+  ```
+
+2. Open your browser and visit http://localhost:3000 to access the application.
+
+## Authors
+
+👤 **Ibrahim Suhail Al-Yousefi**
+
+- GitHub: [@cluab](https://github.com/Cluab)
+- Twitter: [@cluab122](https://twitter.com/cluab122)
+- LinkedIn: [Ebrahim Al-Yousefi](https://www.linkedin.com/in/ebrahim-alyousefi/)
+- Instagram: [@27.i.b](https://www.instagram.com/27.i.b/)
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Cluab/Project-Manager/issues) for any open issues.
+
+## Show Your Support
+
+If you like this project, please give it a star on GitHub!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
