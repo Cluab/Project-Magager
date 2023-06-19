@@ -1,6 +1,6 @@
-# Next.js Project Management App
+# Next.js Project Manager App
 
-This is a small-scale Project Management app that allows you to track your projects and keep track of completed tasks.
+This is a small-scale Project Manager app that allows you to track your projects and keep track of completed tasks.
 
 ## Features
 
